@@ -100,11 +100,10 @@ sticker to everyone who has ever spent more than $2000 at the market. Write a qu
 of customers for them to give stickers to, sorted by last name, then first name. 
 
 HINT: This query requires you to join two tables, use an aggregate function, and use the HAVING keyword. */
---corregir operacion
+
 SELECT 
 c.customer_first_name,
 c.customer_last_name, 
-c.customer_id,
 SUM((quantity * cost_to_customer_per_qty)) [total_spent]
 FROM customer_purchases cp
 INNER JOIN customer c on c.customer_id = cp.customer_id
