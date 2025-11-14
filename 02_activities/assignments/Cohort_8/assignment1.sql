@@ -122,6 +122,7 @@ When inserting the new vendor, you need to appropriately align the columns to be
 -> To insert the new row use VALUES, specifying the value you want for each column:
 VALUES(col1,col2,col3,col4,col5) 
 */
+DROP TABLE IF EXIST temp_new_vendor;
 
 CREATE TEMPORARY TABLE temp_new_vendor AS
 SELECT
