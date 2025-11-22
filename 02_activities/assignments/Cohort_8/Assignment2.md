@@ -55,7 +55,15 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 
 ```
 Your answer...
+
+To achieve an address book with multiple addresses per customer, we can have a table with an extra field for is_active to keep track and make the address_id the only PK in the table. And creating a relationship 1 to many from customer -> address_book.
+
+Meanwhile, to have only one address per customer, the PK should include the customer id, to only allow it one time in the table. And create a relationship one to one.
+
 ```
+
+![alt text](02_activities/assignments/Cohort_8/images/TinyBookstore ERD model 1.png)
+![alt text](02_activities/assignments/Cohort_8/images/TinyBookstore ERD model 2.png)
 
 ***
 
